@@ -22,16 +22,17 @@ export const Header = () => {
     }, []);
 
     return (
+        
         <div className='flex items-center justify-between px-10 py-5 font-openSans font-bold text-lg'>
             <img src="src\assets\logo\logo.png" alt="logo da empresa" />
 
-            {isMobile ? 
-            
+            {isMobile ?
+
                 <div className='text-white flex gap-4'>
                     <button >Menu</button>
                 </div>
 
-            :
+                :
                 <>
                     <div className='text-white flex gap-20'>
                         <button >Início</button>
