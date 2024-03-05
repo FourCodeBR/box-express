@@ -8,8 +8,8 @@ function App() {
   return (
    <div>
     <Header />
-    <div className="w-screen h-screen text-white background-image flex justify-start items-center pl-10 ">
-      <h1 className='text-7xl leading-snug font-bold'>Redefinindo o futuro<br /> da logística com <span className='text-red-600'>eficiência,<br /> confiança e inovação!</span></h1>
+    <div className="w-screen h-screen text-white background-image flex justify-start items-center px-10 ">
+      <h1 className='lg:text-7xl lg:leading-snug text-4xl leading-snug font-bold lg:max-w-6xl max-w-xl'>Redefinindo o futuro da logística com <span className='text-red-600'>eficiência confiança e inovação!</span></h1>
     </div>
    </div>
   )
