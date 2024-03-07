@@ -9,16 +9,16 @@ export const Nav = () => {
 
 
     let links = [
-        { name: 'Início', url: '/', key: 0 },
-        { name: 'Sobre', url: '/', key: 1 },
-        { name: 'Clientes', url: '/', key: 2 },
-        { name: 'Trabalhe conosco', url: '/', key: 3 },
+        { name: 'Início', url: '/dsa', key: 0 },
+        { name: 'Sobre', url: '/as', key: 1 },
+        { name: 'Clientes', url: '/sss', key: 2 },
+        { name: 'Trabalhe conosco', url: '/ffd', key: 3 },
 
     ]
 
     return (
 
-        <div className='shadow-md w-full top-0 left-0'>
+        <div className='shadow-md w-full top-0 left-0 absolute z-10'>
             <div className='md:flex bg-neutral-800 py-4 items-center justify-between px-8'>
                 <div>
                     <img src="src\assets\logo\logo.png" alt="" className='h-10 md:scale-125 cursor-pointer' />
