@@ -29,7 +29,7 @@ export const AboutSection = () => {
         <>
             <div className='md:grid md:grid-cols-2 flex flex-col gap-8 font-openSans md:py-20 py-10 px-10'>
                 <div className='flex md:justify-end justify-center items-center'>
-                    <img src={img} alt="" className='h-[400px] w-[400px]'/>
+                    <img src={img} alt="" className='h-[450px] w-[450px]'/>
                 </div>
                 <div className='flex flex-col justify-center md:items-start items-center'>
                     <div className='w-full max-w-[390px] text-justify'>
