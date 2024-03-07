@@ -18,7 +18,7 @@ export const Nav = () => {
 
     return (
 
-        <div className='shadow-md w-full top-0 left-0 absolute z-10'>
+        <div className='shadow-md w-full top-0 left-0 sticky z-10'>
             <div className='md:flex bg-neutral-800 py-4 items-center justify-between px-8'>
                 <div>
                     <img src="src\assets\logo\logo.png" alt="" className='h-10 md:scale-125 cursor-pointer' />
