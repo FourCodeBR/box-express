@@ -37,8 +37,8 @@ export const AboutSection = () => {
                         <span className='text-wrap'>{aboutText}</span>
                         <div className='grid grid-cols-3 gap-3 w-full bg-red-600 h-[150px] rounded-md mt-4'>
 
-                            {aboutSectionInfos.map((info) => (
-                                <div className='flex flex-col gap-1 py-3 justify-center items-center'>
+                            {aboutSectionInfos.map((info, index) => (
+                                <div key={index} className='flex flex-col gap-1 py-3 justify-center items-center'>
                                     <img src={info.icon} alt="" className='w-11 h-11' />
                                     <span className='text-3xl text-white font-bold'>{info.number}</span>
                                     <span className='text-xl text-white'>{info.text}</span>
