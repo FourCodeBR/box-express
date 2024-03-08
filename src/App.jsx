@@ -2,6 +2,7 @@ import './App.css'
 import { AboutSection } from './components/AboutSection'
 import { Cards } from './components/Cards'
 import { Nav } from './components/Nav'
+import { ServicesType } from './components/ServicesType'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       </div>
       <Cards />
       <AboutSection />
+      <ServicesType />
     </>
   )
 }
