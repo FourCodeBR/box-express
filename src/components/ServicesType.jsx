@@ -1,26 +1,31 @@
 import React from 'react'
+import {SERVICES_DATA} from '../data/servicesData'
 
 export const ServicesType = () => {
+
+    const services = SERVICES_DATA;
 
     return (
 
         <>
 
-            <div className='flex justify-center items-center'>
+            <div className='flex flex-col justify-center items-center'>
 
-                <div className='grid grid-cols-3 w-[1300px] max-w-[1300px]'>
+                {services.map((service, index) => (
+                    <div className='md:grid md:grid-cols-3 flex flex-col md:items-stretch items-center md:w-full md:max-w-[1000px] px-10 py-10'>
 
-                    <div>
-                        <img src="src/assets/img/cargaFracionada.jpeg" alt="" className='h-52 w-full' />
+                        <div className='flex justify-center'>
+                            <img src={service.img} alt="" className='md:h-52 h-64 w-96 md:rounded-l-xl md:rounded-tr-none rounded-t-xl' />
+                        </div>
+
+                        <div className='flex items-center bg-gray-200 rounded-b-xl md:rounded-bl-none md:rounded-r-xl col-span-2 px-5 md:py-0 py-4 md:text-center text-justify md:w-full w-96'>
+                            <p>{service.text}</p>
+                        </div>
+
                     </div>
+                ))}
 
-                    <div className='col-span-2'>
-                        <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ipsum quam, tempor vestibulum velit quis, posuere egestas elit. Donec tincidunt, ligula id blandit consectetur, risus ligula viverra arcu, a rutrum leo ligula eu urna. Phasellus non tortor at nisl laoreet ultrices ac eget felis. Morbi tempus facilisis nulla interdum cursus.
-                        </p>
-                    </div>
 
-                </div>
 
             </div>
 
