@@ -15,7 +15,7 @@ export const OurCustomers = () => {
                         <h1 className='text-3xl font-bold text-red-600'>NOSSOS CLIENTES</h1>
                     </div>
 
-                    <div className='grid grid-cols-3 gap-4 py-20'>
+                    <div className='grid md:grid-cols-3 md:gap-4 gap-16 py-20'>
 
                         {customersLogo.map((customer, index) => {
                             return(
