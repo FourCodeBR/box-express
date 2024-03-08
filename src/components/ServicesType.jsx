@@ -15,7 +15,7 @@ export const ServicesType = () => {
                     const isEven = service.id % 2 === 0;
 
                     return (
-                        <div key={service.id} className={`md:grid md:grid-cols-3 flex flex-col md:items-stretch items-center md:w-full md:max-w-[1000px] px-10 py-10`}>
+                        <div key={service.id} className={`md:grid md:grid-cols-3 flex flex-col md:items-stretch items-center md:w-full md:max-w-[1000px] px-10 py-5 drop-shadow-lg`}>
 
                             <div className={`flex justify-center ${isEven ? 'md:order-last' : ''}`}>
                                 <img src={service.img} alt="" className={`md:h-52 h-64 w-96 ${isEven ? 'md:rounded-r-xl rounded-t-xl md:rounded-tl-none' : 'md:rounded-l-xl md:rounded-tr-none rounded-t-xl'}`} />
