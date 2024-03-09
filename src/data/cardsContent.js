@@ -1,7 +1,7 @@
 export const CARDS_CONTENT = [
     {
         id: 1,
-        icon: 'src/assets/icons/efficiency.svg',
+        icon: 'src\assets\icons\efficiency.svg',
         title: 'EFICIÊNCIA',
         text: 'Nossa abordagem focada na eficiência garante entregas pontuais e otimiza cada etapa do processo logístico. Economize tempo e recursos com a nossa eficiência operacional.'
     },
