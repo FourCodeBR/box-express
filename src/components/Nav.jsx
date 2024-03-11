@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Button } from './Button'
+import logoImg from '../assets/logo/logo.png'
 
 export const Nav = () => {
     const [open, setOpen] = useState(false)
@@ -19,9 +20,9 @@ export const Nav = () => {
     return (
 
         <div className='shadow-md w-full top-0 left-0 sticky z-10'>
-            <div className='md:flex bg-neutral-800 py-4 items-center justify-between px-8'>
+            <div className='md:flex bg-neutral-800 py-4 items-center justify-around px-8'>
                 <div>
-                    <img src="src\assets\logo\logo.png" alt="" className='h-10 scale-125 cursor-pointer' />
+                    <img src={logoImg} alt="" className='h-10 scale-125 cursor-pointer' />
                 </div>
                 <div className='text-3xl absolute right-8 top-6 text-white md:hidden cursor-pointer' onClick={handleMenuClick}>
                     <ion-icon name={open ? 'close' : 'menu'}></ion-icon>

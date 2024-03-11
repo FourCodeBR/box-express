@@ -1,26 +1,28 @@
+import logoipsum from '../assets/img/logoipsum.png';
+
 export const CUSTOMERS_DATA = [
     {
         id: 1,
-        logo: 'src/assets/img/logoipsum.png'
+        logo: logoipsum
     },
     {
         id: 2,
-        logo: 'src/assets/img/logoipsum.png'
+        logo: logoipsum
     },
     {
         id: 3,
-        logo: 'src/assets/img/logoipsum.png'
+        logo: logoipsum
     },
     {
         id: 4,
-        logo: 'src/assets/img/logoipsum.png'
+        logo: logoipsum
     },
     {
         id: 5,
-        logo: 'src/assets/img/logoipsum.png'
+        logo: logoipsum
     },
     {
         id: 6,
-        logo: 'src/assets/img/logoipsum.png'
+        logo: logoipsum
     },
 ]

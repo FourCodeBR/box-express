@@ -2,6 +2,7 @@ import React from 'react'
 import office from '../assets/img/office.png'
 import states from '../assets/img/states.png'
 import trucks from '../assets/img/trucks.png'
+import aboutImg from '../assets/img/aboutImg.png'
 
 const aboutSectionInfos = [
     {
@@ -25,7 +26,7 @@ let aboutText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praese
 
 export const AboutSection = () => {
 
-    let img = 'src/assets/img/aboutImg.png'
+    let img = aboutImg;
 
     return (
 
