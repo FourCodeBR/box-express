@@ -1,18 +1,21 @@
 import React from 'react'
+import office from '../assets/img/office.png'
+import states from '../assets/img/states.png'
+import trucks from '../assets/img/trucks.png'
 
 const aboutSectionInfos = [
     {
-        icon: 'src/assets/img/office.png',
+        icon: office,
         number: '5',
         text: 'Filiais'
     },
     {
-        icon: 'src/assets/img/states.png',
+        icon: states,
         number: '20',
         text: 'Estados'
     },
     {
-        icon: 'src/assets/img/trucks.png',
+        icon: trucks,
         number: '350',
         text: 'Veículos'
     }
