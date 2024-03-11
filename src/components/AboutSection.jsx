@@ -37,7 +37,7 @@ export const AboutSection = () => {
                 </div>
                 <div className='flex flex-col justify-center md:items-start items-center'>
                     <div className='w-full max-w-[390px] text-justify'>
-                        <h1 className='text-center text-3xl text-red-600 font-bold pb-3'>SOBRE A EMPRESA</h1>
+                        <h1 className='text-center md:text-3xl text-2xl text-red-600 font-bold pb-3'>SOBRE A EMPRESA</h1>
                         <span className='text-wrap'>{aboutText}</span>
                         <div className='grid grid-cols-3 gap-3 w-full bg-red-600 h-[150px] rounded-md mt-4 drop-shadow-lg'>
 
