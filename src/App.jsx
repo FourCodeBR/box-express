@@ -1,7 +1,7 @@
 import './App.css'
 import { AboutSection } from './components/AboutSection'
-import { Button } from './components/Button'
 import { Cards } from './components/Cards'
+import { ContactForm } from './components/ContactForm'
 import { Nav } from './components/Nav'
 import { OurCustomers } from './components/OurCustomers'
 import { ServicesType } from './components/ServicesType'
@@ -26,6 +26,7 @@ function App() {
       <AboutSection />
       <ServicesType />
       <OurCustomers />
+      <ContactForm />
     </>
   )
 }
