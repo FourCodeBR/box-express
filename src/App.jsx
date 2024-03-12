@@ -2,6 +2,7 @@ import './App.css'
 import { AboutSection } from './components/AboutSection'
 import { Cards } from './components/Cards'
 import { ContactForm } from './components/ContactForm'
+import { Footer } from './components/Footer'
 import { Nav } from './components/Nav'
 import { OurCustomers } from './components/OurCustomers'
 import { ServicesType } from './components/ServicesType'
@@ -27,6 +28,7 @@ function App() {
       <ServicesType />
       <OurCustomers />
       <ContactForm />
+      <Footer />
     </>
   )
 }
