@@ -11,13 +11,15 @@ export const ContactForm = () => {
 
         <div className='flex justify-center items-center flex-col w-full max-w-[1000px] shadow-custom py-10 rounded-md'>
 
-          <div className='text-3xl font-bold text-red-600 pb-10'>
-            ENTRE EM CONTATO CONOSCO
+          <div className='flex justify-center md:text-3xl text-2xl font-bold text-red-600 pb-10 px-5 w-full'>
+            <h1>
+              ENTRE EM CONTATO CONOSCO
+            </h1>
           </div>
 
-          <form action="" className='pt10'>
+          <form action="" className='pt10 w-full px-10'>
 
-            <div className='grid grid-cols-2 gap-4 w-full min-w-[900px]'>
+            <div className='grid grid-cols-2 gap-4'>
 
               <div>
                 <input type="text" placeholder='NOME' className='w-full rounded-xl py-2 px-3 bg-slate-100' />
