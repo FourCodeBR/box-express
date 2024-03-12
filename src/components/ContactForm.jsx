@@ -7,15 +7,15 @@ export const ContactForm = () => {
 
     <>
 
-      <div className='flex justify-center pb-20'>
+      <div className='flex justify-center pb-20 font-openSans'>
 
-        <div className='flex justify-center items-center flex-col w-full max-w-[1000px] shadow-custom py-5 rounded-md'>
+        <div className='flex justify-center items-center flex-col w-full max-w-[1000px] shadow-custom py-10 rounded-md'>
 
-          <div className='text-3xl font-bold text-red-600'>
+          <div className='text-3xl font-bold text-red-600 pb-10'>
             ENTRE EM CONTATO CONOSCO
           </div>
 
-          <form action="" className='py-10'>
+          <form action="" className='pt10'>
 
             <div className='grid grid-cols-2 gap-4 w-full min-w-[900px]'>
 
