@@ -21,7 +21,7 @@ export const ServicesType = () => {
                                 <img src={service.img} alt="" className={`md:h-52 h-64 w-96 ${isEven ? 'md:rounded-r-xl rounded-t-xl md:rounded-tl-none' : 'md:rounded-l-xl md:rounded-tr-none rounded-t-xl'}`} />
                             </div>
 
-                            <div className={`flex flex-col justify-center gap-4 items-center bg-gray-200 ${isEven ? 'md:rounded-l-xl rounded-b-xl md:rounded-br-none' : 'rounded-b-xl md:rounded-bl-none md:rounded-r-xl'}  col-span-2 px-5 md:py-4 py-4 text-justify md:w-full w-full`}>
+                            <div className={`flex flex-col justify-center gap-4 items-center shadow-custom ${isEven ? 'md:rounded-l-xl rounded-b-xl md:rounded-br-none' : 'rounded-b-xl md:rounded-bl-none md:rounded-r-xl'}  col-span-2 px-5 md:py-4 py-4 text-justify md:w-full w-full`}>
                                 <h1 className='text-xl font-bold uppercase text-red-600'>{service.title}</h1>
                                 <p>{service.text}</p>
                             </div>

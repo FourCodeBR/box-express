@@ -10,6 +10,11 @@ export default {
         'slide-down': 'slideDown 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-in-out',
       },
+
+      boxShadow: {
+        'custom': '0 0 50px rgba(0, 0, 0, 0.15)'
+      },
+
       keyframes: {
         slideDown: {
           '0%': { transform: 'translateY(-100%)', opacity: 0 },
