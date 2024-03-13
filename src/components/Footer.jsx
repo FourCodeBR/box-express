@@ -4,8 +4,11 @@ import instagram from '../assets/icons/instagram.png'
 import linkedin from '../assets/icons/linkedin.png'
 import youtube from '../assets/icons/youtube.png'
 import logoWhite from '../assets/logo/logoWhite.png'
+import { LINKS_DATA } from '../data/links'
 
 export const Footer = () => {
+
+    let links = LINKS_DATA;
 
     return (
 
@@ -22,11 +25,11 @@ export const Footer = () => {
                         <div className='flex flex-col justify-center'>
                             <h1 className='text-xl text-center font-bold'>LINKS ÚTEIS</h1>
                             <div className='flex flex-col pt-5 text-[13px]'>
-                                <a href="#" className='text-center hover:text-slate-300 duration-200'>INICÍO</a>
-                                <a href="#" className='text-center hover:text-slate-300 duration-200'>SOBRE</a>
-                                <a href="#" className='text-center hover:text-slate-300 duration-200'>CLIENTES</a>
-                                <a href="#" className='text-center hover:text-slate-300 duration-200'>TRABALHE CONOSCO</a>
-                                <a href="#" className='text-center hover:text-slate-300 duration-200'>CONTATO</a>
+                                {links.map((link, key) => {
+                                    return (
+                                        <a href={link.url} key={link.key} className='text-center hover:text-slate-300 duration-200 uppercase'>{link.name}</a>
+                                    )
+                                })}
                             </div>
                         </div>
 
@@ -44,7 +47,7 @@ export const Footer = () => {
                             <h1 className='text-xl text-center'>SOCIAL</h1>
                             <div className='flex gap-2 pt-5'>
 
-                                <div className='w-6 flex'>
+                                <div className='w-6'>
                                     <a href="" ><img src={facebook} alt="" /></a>
                                 </div>
                                 <div className='w-6'>

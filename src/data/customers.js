@@ -1,28 +1,34 @@
 import logoipsum from '../assets/img/logoipsum.png';
+import kemin from '../assets/customerLogos/kemin.png'
+import spartan from '../assets/customerLogos/spartan.png'
+import fugini from '../assets/customerLogos/fugini.png'
+import chr from '../assets/customerLogos/chr.png'
+import nutriplant from '../assets/customerLogos/nutriplant.png'
+import energis8 from '../assets/customerLogos/energis8.png'
 
 export const CUSTOMERS_DATA = [
     {
         id: 1,
-        logo: logoipsum
+        logo: kemin
     },
     {
         id: 2,
-        logo: logoipsum
+        logo: spartan
     },
     {
         id: 3,
-        logo: logoipsum
+        logo: fugini
     },
     {
         id: 4,
-        logo: logoipsum
+        logo: chr
     },
     {
         id: 5,
-        logo: logoipsum
+        logo: nutriplant
     },
     {
         id: 6,
-        logo: logoipsum
+        logo: energis8
     },
 ]

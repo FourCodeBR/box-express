@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from './Button'
 import logoImg from '../assets/logo/logo.png'
+import { LINKS_DATA } from '../data/links'
 
 export const Nav = () => {
     const [open, setOpen] = useState(false)
@@ -9,13 +10,7 @@ export const Nav = () => {
     }
 
 
-    let links = [
-        { name: 'Início', url: '#home', key: 0 },
-        { name: 'Sobre', url: '#about', key: 1 },
-        { name: 'Serviços', url: '#services', key: 2 },
-        { name: 'Clientes', url: '#customers', key: 3 },
-
-    ]
+    let links = LINKS_DATA;
 
     return (
 
@@ -23,7 +18,7 @@ export const Nav = () => {
             <div className='md:flex bg-neutral-800 py-4 items-center justify-around px-8'>
 
                 <div>
-                    <a href="#home">
+                    <a href="https://box.fourcode.com.br/">
                         <img src={logoImg} alt="" className='h-10 scale-125 cursor-pointer' />
                     </a>
                 </div>
