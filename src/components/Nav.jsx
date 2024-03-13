@@ -10,10 +10,10 @@ export const Nav = () => {
 
 
     let links = [
-        { name: 'Início', url: '/dsa', key: 0 },
-        { name: 'Sobre', url: '/as', key: 1 },
-        { name: 'Clientes', url: '/sss', key: 2 },
-        { name: 'Trabalhe conosco', url: '/ffd', key: 3 },
+        { name: 'Início', url: '#home', key: 0 },
+        { name: 'Sobre', url: '#about', key: 1 },
+        { name: 'Serviços', url: '#services', key: 2 },
+        { name: 'Clientes', url: '#customers', key: 3 },
 
     ]
 
@@ -23,7 +23,9 @@ export const Nav = () => {
             <div className='md:flex bg-neutral-800 py-4 items-center justify-around px-8'>
 
                 <div>
-                    <img src={logoImg} alt="" className='h-10 scale-125 cursor-pointer' />
+                    <a href="#home">
+                        <img src={logoImg} alt="" className='h-10 scale-125 cursor-pointer' />
+                    </a>
                 </div>
 
                 <div className='text-3xl absolute right-8 top-6 text-white md:hidden cursor-pointer' onClick={handleMenuClick}>
@@ -42,7 +44,7 @@ export const Nav = () => {
                     )}
 
                     <Button>Contato</Button>
-                    
+
                 </ul>
             </div>
         </div>

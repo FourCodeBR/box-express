@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Nav />
-      <div className='h-screen w-full bgImg'>
+      <div className='h-screen w-full bgImg'id='home'>
         <div className='h-screen pb-36 flex flex-col justify-center items-center'>
 
           <h1 className={`md:text-5xl text-3xl text-white font-bold text-center font-openSans leading-snug shadowText md:px-28 px-10 text-wrap`}>Redefinindo o futuro da logística com eficiência, confiança e inovação!</h1>

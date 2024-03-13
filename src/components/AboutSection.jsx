@@ -22,7 +22,7 @@ const aboutSectionInfos = [
     }
 ]
 
-let aboutText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ipsum quam, tempor vestibulum velit quis, posuere egestas elit. Donec tincidunt, ligula id blandit consectetur, risus ligula viverra arcu, a rutrum leo ligula eu urna. Phasellus non tortor at nisl laoreet ultrices ac eget felis. Morbi tempus facilisis nulla interdum cursus.'
+let aboutText = 'Bem-vindo à Box Express, sua parceira confiável em soluções logísticas. Fundada com o compromisso de simplificar a complexidade do transporte e da cadeia de suprimentos, nós oferecemos serviços ágeis e personalizados para atender às necessidades de nossos clientes. Com uma equipe experiente e uma abordagem orientada para a excelência, estamos dedicados a impulsionar o sucesso de seus negócios através de operações eficientes e confiáveis.'
 
 export const AboutSection = () => {
 
@@ -31,9 +31,9 @@ export const AboutSection = () => {
     return (
 
         <>
-            <div className='md:grid md:grid-cols-2 flex flex-col gap-8 font-openSans md:py-20 py-10 px-10'>
+            <div className='md:grid md:grid-cols-2 flex flex-col gap-8 font-openSans md:py-20 py-10 px-10' id='about'>
                 <div className='flex md:justify-end justify-center items-center'>
-                    <img src={img} alt="" className='h-[450px] w-[450px]'/>
+                    <img src={img} alt="" className='h-[450px] w-[450px] hidden md:block'/>
                 </div>
                 <div className='flex flex-col justify-center md:items-start items-center'>
                     <div className='w-full max-w-[390px] text-justify'>

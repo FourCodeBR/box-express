@@ -12,7 +12,7 @@ export const ContactForm = () => {
 
     <>
 
-      <div className='flex justify-center pb-20 font-openSans md:px-10 px-2'>
+      <div className='flex justify-center pb-20 font-openSans md:px-10 px-2 md:py-20 py-10' id='contact'>
 
         <div className='flex justify-center items-center flex-col w-full max-w-[1000px] shadow-custom py-10 rounded-md'>
 

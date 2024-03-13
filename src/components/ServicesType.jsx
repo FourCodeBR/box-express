@@ -9,7 +9,7 @@ export const ServicesType = () => {
 
         <>
 
-            <div className='flex flex-col justify-center items-center font-openSans'>
+            <div className='flex flex-col justify-center items-center font-openSans py-10' id='services'>
 
                 {services.map((service, index) => {
                     const isEven = service.id % 2 === 0;
