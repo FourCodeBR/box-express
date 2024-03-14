@@ -31,9 +31,10 @@ export const OurCustomers = () => {
                         slidesPerView={3}
                         loop={true}
                         autoplay={{
-                            delay: 2000,
+                            delay: 1000,
                             disableOnInteraction: false,
                         }}
+                        speed={2000}
                        breakpoints={{
                             0: {
                                 slidesPerView: 2,
