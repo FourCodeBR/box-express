@@ -6,6 +6,7 @@ import 'swiper/swiper-bundle.css';
 
 
 
+
 export const OurCustomers = () => {
 
 
@@ -30,8 +31,8 @@ export const OurCustomers = () => {
                         slidesPerView={3}
                         loop={true}
                         autoplay={{
-                            delay: 1000,
-                            disableOnInteraction: false
+                            delay: 2000,
+                            disableOnInteraction: false,
                         }}
                        breakpoints={{
                             0: {
