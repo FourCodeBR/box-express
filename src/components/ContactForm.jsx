@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import validator from 'validator';
 
 export const ContactForm = () => {
-  const { register, handleSubmit, formState: {errors} } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = (data) => {
     console.log(data);
   };
@@ -14,12 +14,12 @@ export const ContactForm = () => {
 
       <div className='flex justify-center pb-20 font-openSans md:px-10 px-2 md:py-20 py-10' id='contact'>
 
-        <div className='flex justify-center items-center flex-col w-full max-w-[1000px] shadow-custom py-10 rounded-md'>
+        <div className='flex justify-center items-center flex-col w-full  shadow-custom py-10 rounded-md'>
 
-          <div className='flex justify-center md:text-3xl text-2xl font-bold text-red-600 pb-10 px-5 w-full'>
-            <h1>
-              ENTRE EM CONTATO CONOSCO
-            </h1>
+          <div className='flex justify-center text-center md:text-3xl text-2xl font-bold text-red-600 pb-10 px-5'>
+              <h1>
+                ENTRE EM CONTATO CONOSCO
+              </h1>
           </div>
 
           <form action="" className='pt10 w-full px-10'
@@ -36,7 +36,7 @@ export const ContactForm = () => {
                   type="text"
                   placeholder='NOME'
                   className={`w-full rounded-xl py-2 px-3 bg-slate-100 ${errors.name ? 'border border-red-600' : ''} focus:outline-none `}
-                  {...register('name', {required: true})}
+                  {...register('name', { required: true })}
                 />
                 {errors.name && <p className='text-red-600 text-sm'>Campo obrigatório</p>}
               </div>
@@ -46,7 +46,7 @@ export const ContactForm = () => {
                   type="text"
                   placeholder='SOBRENOME'
                   className={`w-full rounded-xl py-2 px-3 bg-slate-100 focus:outline-none ${errors.lastName ? 'border border-red-600' : ''}`}
-                  {...register('lastName', {required: true})}
+                  {...register('lastName', { required: true })}
                 />
                 {errors.lastName && <p className='text-red-600 text-sm'>Campo obrigatório</p>}
               </div>
@@ -56,7 +56,7 @@ export const ContactForm = () => {
                   type="tel"
                   placeholder='TELEFONE'
                   className={`w-full rounded-xl py-2 px-3 bg-slate-100 focus:outline-none ${errors.phone ? 'border border-red-600' : ''}`}
-                  {...register('phone', {required: true, minLength: 11} )}
+                  {...register('phone', { required: true, minLength: 11 })}
                 />
                 {errors.phone?.type === 'required' && <p className='text-red-600 text-sm'>Campo obrigatório</p>}
                 {errors.phone?.type === 'minLength' && <p className='text-red-600 text-sm'>Telefone inválido</p>}
@@ -67,7 +67,7 @@ export const ContactForm = () => {
                   type="email"
                   placeholder='E-MAIL'
                   className={`w-full rounded-xl py-2 px-3 bg-slate-100 focus:outline-none ${errors.email ? 'border border-red-600' : ''}`}
-                  {...register('email', {required: true, validate: (value) => validator.isEmail(value)})}
+                  {...register('email', { required: true, validate: (value) => validator.isEmail(value) })}
                 />
                 {errors.email?.type === 'validate' && <p className='text-red-600 text-sm'>E-mail inválido</p>}
                 {errors.email?.type === 'required' && <p className='text-red-600 text-sm'>Campo obrigatório</p>}
@@ -79,7 +79,7 @@ export const ContactForm = () => {
                   cols="60"
                   placeholder='DIGITE SUA MENSAGEM'
                   className={`col-span-2 w-full rounded-xl py-2 px-3 bg-slate-100 focus:outline-none ${errors.mensage ? 'border border-red-600' : ''}`}
-                  {...register('mensage', {required: true})}
+                  {...register('mensage', { required: true })}
                 ></textarea>
                 {errors.mensage && <p className='text-red-600 text-sm'>Campo obrigatório</p>}
               </div>
