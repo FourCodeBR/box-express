@@ -8,8 +8,6 @@ import { OurCustomers } from './components/OurCustomers'
 import { ServicesType } from './components/ServicesType'
 
 function App() {
-  /* verificar se o tamanho da tela é menor que 780px */
-  const isMobile = window.innerWidth < 780;
 
   return (
     <>
