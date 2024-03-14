@@ -16,7 +16,7 @@ function App() {
     <>
       <Nav />
 
-      <div className='h-screen w-full bgImg' id='home'>
+      <div className='h-full w-full bgImg pt-[72px]' id='home'>
 
         <motion.div 
           className='h-screen pb-36 flex flex-col justify-center items-center'

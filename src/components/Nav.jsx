@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Button } from './Button'
 import logoImg from '../assets/logo/logo.png'
 import { LINKS_DATA } from '../data/links'
+import { motion } from 'framer-motion'
 
 export const Nav = () => {
     const [open, setOpen] = useState(false)
@@ -14,7 +15,12 @@ export const Nav = () => {
 
     return (
 
-        <div className='shadow-md w-full top-0 left-0 sticky z-10'>
+        <motion.div
+            className='shadow-md w-full top-0 left-0 fixed z-10'
+            initial={{ y: -100 }} // initial position above the screen
+            animate={{ y: 0 }} // animate to y position 0
+            transition={{ duration: 0.5 }} // transition duration of 0.5 seconds
+        >
             <div className='md:flex bg-neutral-800 py-4 items-center justify-around px-8'>
 
                 <div>
@@ -42,6 +48,6 @@ export const Nav = () => {
 
                 </ul>
             </div>
-        </div>
+        </motion.div>
     )
 }
