@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from './Button'
 import logoImg from '../assets/logo/logo.png'
+import logoLL from '../assets/logo/logoLL.png'
 import { LINKS_DATA } from '../data/links'
 import { motion } from 'framer-motion'
 
@@ -21,11 +22,11 @@ export const Nav = () => {
             animate={{ y: 0 }} // animate to y position 0
             transition={{ duration: 0.5 }} // transition duration of 0.5 seconds
         >
-            <div className='md:flex bg-neutral-800 py-4 items-center justify-around px-8'>
+            <div className='md:flex bg-red-600 py-4 items-center justify-around px-8'>
 
                 <div>
                     <a href="https://box.fourcode.com.br/">
-                        <img src={logoImg} alt="" className='h-10 scale-125 cursor-pointer' />
+                        <img src={logoLL} alt="" className='h-10 scale-150 cursor-pointer' />
                     </a>
                 </div>
 
@@ -33,7 +34,7 @@ export const Nav = () => {
                     <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
                 </div>
 
-                <ul className={`md:flex md:items-center md:pb-0 pb-4 absolute md:static bg-neutral-800 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-[70px]' : '-top-96'}`}>
+                <ul className={`md:flex md:items-center md:pb-0 pb-4 absolute md:static bg-red-600 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-[70px]' : '-top-96'}`}>
 
                     {links.map((link, key) => (
 
