@@ -3,9 +3,11 @@ import { useForm } from 'react-hook-form'
 import validator from 'validator';
 
 export const ContactForm = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
+    reset();
+
   };
 
   return (
