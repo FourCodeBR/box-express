@@ -1,27 +1,56 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import validator from 'validator';
+import emailjs from '@emailjs/browser';
+import loading from '../assets/icons/loading.svg';
 
 export const ContactForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [startTimer, setStartTimer] = useState(false);
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
-    reset();
+  const form = useRef();
 
+  const onSubmit = async (data) => {
+    setIsLoading(true);
+    await emailjs.sendForm('service_4gpihbb', 'template_1qbbldh', form.current, {
+      publicKey: 'FmK8BLE1KliR3nfc8'
+    }).then((result) => {
+      console.log(result.text);
+    }
+    ).catch((error) => {
+      console.log(error.text);
+    });
+
+    reset();
+    setIsLoading(false);
+    setIsVisible(true);
+    setStartTimer(true);
   };
+
+  useEffect(() => {
+    if (startTimer) {
+      const timer = setTimeout(() => {
+        setIsVisible(false);
+        setStartTimer(false);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [startTimer]);
 
   return (
 
     <>
-      
+
       <div className='flex justify-center pb-20 font-openSans md:px-10 px-2 md:py-20 py-10' id='contact'>
 
         <div className='flex justify-center items-center flex-col w-full max-w-[1000px] shadow-custom py-10 rounded-md'>
 
           <div className='flex justify-center text-center md:text-3xl text-2xl font-bold text-red-600 pb-10 px-5'>
-              <h1>
-                ENTRE EM CONTATO CONOSCO
-              </h1>
+            <h1>
+              ENTRE EM CONTATO CONOSCO
+            </h1>
           </div>
 
           <form action="" className='pt10 w-full px-10'
@@ -29,6 +58,7 @@ export const ContactForm = () => {
               e.preventDefault();
               handleSubmit(onSubmit)();
             }}
+            ref={form}
           >
 
             <div className='grid grid-cols-2 gap-4'>
@@ -77,20 +107,29 @@ export const ContactForm = () => {
 
               <div className='col-span-2'>
                 <textarea
-                  name="mensage"
+                  name="message"
                   cols="60"
                   placeholder='DIGITE SUA MENSAGEM'
-                  className={`col-span-2 w-full rounded-xl py-2 px-3 bg-slate-100 focus:outline-none ${errors.mensage ? 'border border-red-600' : ''}`}
-                  {...register('mensage', { required: true })}
+                  className={`col-span-2 w-full rounded-xl py-2 px-3 bg-slate-100 focus:outline-none ${errors.message ? 'border border-red-600' : ''}`}
+                  {...register('message', { required: true })}
                 ></textarea>
-                {errors.mensage && <p className='text-red-600 text-sm'>Campo obrigatório</p>}
+                {errors.message && <p className='text-red-600 text-sm'>Campo obrigatório</p>}
               </div>
 
               <div className='col-span-2 flex justify-center'>
+
                 <button
-                  className='bg-red-600 px-6 py-1 rounded-md font-openSans text-lg text-white md:ml-8 hover:bg-red-500 duration-300'
-                  onSubmit={() => handleSubmit(onSubmit)()}
-                > Enviar </button>
+                  className='flex gap-3 items-center bg-red-600 px-6 py-1 rounded-md font-openSans text-lg text-white hover:bg-red-500 duration-300'
+                  onClick={() => handleSubmit(onSubmit)()}
+                  disabled={isLoading}>
+                  <img src={loading} alt="" className={`h-5 animate-spin ${isLoading ? '' : 'hidden'}`} />
+                  Enviar
+                </button>
+
+              </div>
+
+              <div className='col-span-2 flex items-center justify-center'>
+                {isVisible && <p className='text-green-600 text-sm'>Mensagem enviada com sucesso!</p>}
               </div>
 
             </div>
