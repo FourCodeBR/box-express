@@ -8,6 +8,7 @@ export const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [startTimer, setStartTimer] = useState(false);
+  const [error, setError] = useState(false);
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const form = useRef();
 
@@ -16,10 +17,10 @@ export const ContactForm = () => {
     await emailjs.sendForm('service_4gpihbb', 'template_1qbbldh', form.current, {
       publicKey: 'FmK8BLE1KliR3nfc8'
     }).then((result) => {
-      console.log(result.text);
+      return;
     }
     ).catch((error) => {
-      console.log(error.text);
+      setError(true);
     });
 
     reset();
@@ -129,7 +130,8 @@ export const ContactForm = () => {
               </div>
 
               <div className='col-span-2 flex items-center justify-center'>
-                {isVisible && <p className='text-green-600 text-sm'>Mensagem enviada com sucesso!</p>}
+                {isVisible && !error && <p className='text-green-600 text-md'>Mensagem enviada com sucesso!</p>}
+                {error && <p className='text-red-600 text-md'>Erro ao enviar mensagem!</p>}
               </div>
 
             </div>

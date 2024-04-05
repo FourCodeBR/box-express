@@ -19,10 +19,10 @@ export const Footer = () => {
     return (
 
         <>
-            <div className='bg-red-600 flex flex-col justify-center py-8 font-openSans text-white'>
+            <div className='bg-red-600 flex flex-col justify-center items-center py-8 font-openSans text-white'>
 
                 <div className='flex justify-center flex-start'>
-                    <div className='grid md:grid-cols-4 md:gap-10 gap-10 items-start w-full max-w-[1000px]'>
+                    <div className='grid md:grid-cols-4 md:gap-10 gap-10 md:items-start w-full max-w-[1000px]'>
 
                         <div className='flex justify-center md:order-none order-last h-full items-center'>
                             <img src={logoLL} alt="" className='md:h-28 h-20' />
