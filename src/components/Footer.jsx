@@ -16,18 +16,18 @@ export const Footer = () => {
     return (
 
         <>
-            <div className='bg-red-600 flex flex-col justify-center md:py-8 py-8 font-openSans text-white'>
+            <div className='bg-red-600 flex flex-col justify-center py-8 font-openSans text-white'>
 
                 <div className='flex justify-center flex-start'>
-                    <div className='grid md:grid-cols-4 md:gap-0 gap-10 items-start w-full max-w-[1000px]'>
+                    <div className='grid md:grid-cols-4 md:gap-10 gap-10 items-start w-full max-w-[1000px]'>
 
                         <div className='flex justify-center md:order-none order-last'>
                             <img src={logoLL} alt="" className='md:h-28 h-20'/>
                         </div>
 
                         <div className='flex flex-col justify-center'>
-                            <h1 className='text-xl text-center font-bold'>LINKS ÚTEIS</h1>
-                            <div className='flex flex-col pt-5 text-[13px]'>
+                            <h1 className='text-xl text-start font-bold'>LINKS ÚTEIS</h1>
+                            <div className='flex flex-col pt-5 text-[13px] items-start'>
                                 {links.map((link, key) => {
                                     return (
                                         <a href={link.url} key={link.key} className='text-center hover:text-slate-300 duration-200 uppercase'>{link.name}</a>
@@ -37,12 +37,12 @@ export const Footer = () => {
                         </div>
 
                         <div className='flex flex-col justify-center'>
-                            <h1 className='text-xl text-center font-bold'>SOBRE</h1>
+                            <h1 className='text-xl text-start font-bold'>SOBRE</h1>
                             <div className='pt-5 text-[13px]'>
-                                <p className='text-center'><a href="mailto:LFELIPE.DIAS10@GMAIL.COM">leandro@lllog.com.br</a></p>
-                                <p className='text-center'>R Odilla Cia Antônio <br /> Condomínio industrial Veccon Gamma</p>
-                                <p className='text-center'>Sumaré/Sp</p>
-                                <p className='text-center'><a href="tel:+551922239755">(19) 2223-9755</a> / <a href="tel:+551922239756">(19) 2223-9756</a></p>
+                                <p className='text-start'><a href="mailto:LFELIPE.DIAS10@GMAIL.COM">leandro@lllog.com.br</a></p>
+                                <p className='text-start'>R Odilla Cia Antônio <br /> Condomínio industrial Veccon Gamma</p>
+                                <p className='text-start'>Sumaré/Sp</p>
+                                <p className='text-start'><a href="tel:+551922239755">(19) 2223-9755</a> / <a href="tel:+551922239756">(19) 2223-9756</a></p>
                             </div>
                         </div>
 
