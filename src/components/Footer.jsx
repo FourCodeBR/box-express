@@ -7,6 +7,9 @@ import logoWhite from '../assets/logo/logoWhite.png'
 import fourcode from '../assets/logo/fourcode.png'
 import logoLL from '../assets/logo/logoLL.png'
 import { LINKS_DATA } from '../data/links'
+import email from '../assets/icons/email.svg'
+import adress from '../assets/icons/adress.svg'
+import phone from '../assets/icons/phone.svg'
 
 export const Footer = () => {
 
@@ -21,8 +24,8 @@ export const Footer = () => {
                 <div className='flex justify-center flex-start'>
                     <div className='grid md:grid-cols-4 md:gap-10 gap-10 items-start w-full max-w-[1000px]'>
 
-                        <div className='flex justify-center md:order-none order-last'>
-                            <img src={logoLL} alt="" className='md:h-28 h-20'/>
+                        <div className='flex justify-center md:order-none order-last h-full items-center'>
+                            <img src={logoLL} alt="" className='md:h-28 h-20' />
                         </div>
 
                         <div className='flex flex-col justify-center'>
@@ -39,14 +42,27 @@ export const Footer = () => {
                         <div className='flex flex-col justify-center'>
                             <h1 className='text-xl text-start font-bold'>SOBRE</h1>
                             <div className='pt-5 text-[13px]'>
-                                <p className='text-start'><a href="mailto:LFELIPE.DIAS10@GMAIL.COM">leandro@lllog.com.br</a></p>
-                                <p className='text-start'>R Odilla Cia Antônio <br /> Condomínio industrial Veccon Gamma</p>
-                                <p className='text-start'>Sumaré/Sp</p>
-                                <p className='text-start'><a href="tel:+551922239755">(19) 2223-9755</a> / <a href="tel:+551922239756">(19) 2223-9756</a></p>
+
+                                <p className='text-start'>
+                                    <a href="mailto:LFELIPE.DIAS10@GMAIL.COM" className='flex items-center pb-1'>
+                                        <img src={email} className='h-4 pr-2' alt="" />
+                                        leandro@lllog.com.br
+                                    </a>
+                                </p>
+
+                                <p className='text-start flex items-center pb-1'>
+                                    <img src={adress} alt="" className='h-4 pr-2' />
+                                    Rua Odilla Cia Antônio, <br /> Condomínio industrial Veccon Gamma, Sumaré / SP
+                                </p>
+
+                                <p className='text-start flex items-center'>
+                                    <img src={phone} alt="" className='h-4 pr-2' />
+                                    <a href="tel:+551922239755">(19) 2223-9755</a> / <a href="tel:+551922239756">(19) 2223-9756</a>
+                                </p>
                             </div>
                         </div>
 
-                        <div className='flex flex-col items-center justify-center font-bold'>
+                        <div className='flex flex-col items-start justify-center font-bold'>
                             <h1 className='text-xl text-center'>SOCIAL</h1>
                             <div className='flex gap-2 pt-5'>
 
@@ -62,7 +78,7 @@ export const Footer = () => {
                                 <div className='w-6'>
                                     <a href=""><img src={youtube} alt="" /></a>
                                 </div>
-                                
+
                             </div>
                         </div>
 
@@ -80,7 +96,7 @@ export const Footer = () => {
                     </div>
 
                     <div className='flex items-center gap-1'>
-                        <p>Desenvolvido por</p><a href="https://fourcode.com.br/" target='_blank'><img src={fourcode} alt="" className='h-5' /></a> 
+                        <p>Desenvolvido por</p><a href="https://fourcode.com.br/" target='_blank'><img src={fourcode} alt="" className='h-5' /></a>
                     </div>
 
                 </div>
