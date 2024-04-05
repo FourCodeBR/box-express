@@ -18,7 +18,7 @@ function App() {
 
       <div className='h-full w-full bgImg pt-[72px]' id='home'>
 
-        <motion.div 
+        <motion.div
           className='h-screen pb-36 flex flex-col justify-center items-center'
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -29,7 +29,9 @@ function App() {
 
           <h2 className='md:text-2xl text-lg text-center font-openSans text-white shadowText font-semibold pt-5 pb-10'> Faça parte da mudança: otimize sua jornada logística hoje mesmo! </h2>
 
-          <button className={`bg-red-600 text-white px-6 py-2 md:text-2xl text-md rounded-full drop-shadow-lg hover:bg-red-500 duration-300 mb-6`}>Entre em contato</button>
+          <a href="#contact">
+            <button className={`bg-red-600 text-white px-6 py-2 md:text-2xl text-md rounded-full drop-shadow-lg hover:bg-red-500 duration-300 mb-6`}>Entre em contato</button>
+          </a>
 
         </motion.div>
 

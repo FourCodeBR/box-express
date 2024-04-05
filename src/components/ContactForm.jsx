@@ -66,7 +66,7 @@ export const ContactForm = () => {
               <div>
                 <input
                   type="text"
-                  placeholder='NOME'
+                  placeholder='Nome'
                   className={`w-full rounded-xl py-2 px-3 bg-slate-100 ${errors.name ? 'border border-red-600' : ''} focus:outline-none `}
                   {...register('name', { required: true })}
                 />
@@ -76,7 +76,7 @@ export const ContactForm = () => {
               <div>
                 <input
                   type="text"
-                  placeholder='SOBRENOME'
+                  placeholder='Sobrenome'
                   className={`w-full rounded-xl py-2 px-3 bg-slate-100 focus:outline-none ${errors.lastName ? 'border border-red-600' : ''}`}
                   {...register('lastName', { required: true })}
                 />
@@ -86,7 +86,7 @@ export const ContactForm = () => {
               <div>
                 <input
                   type="tel"
-                  placeholder='TELEFONE'
+                  placeholder='Telefone'
                   className={`w-full rounded-xl py-2 px-3 bg-slate-100 focus:outline-none ${errors.phone ? 'border border-red-600' : ''}`}
                   {...register('phone', { required: true, minLength: 11 })}
                 />
@@ -97,7 +97,7 @@ export const ContactForm = () => {
               <div>
                 <input
                   type="email"
-                  placeholder='E-MAIL'
+                  placeholder='E-mail'
                   className={`w-full rounded-xl py-2 px-3 bg-slate-100 focus:outline-none ${errors.email ? 'border border-red-600' : ''}`}
                   {...register('email', { required: true, validate: (value) => validator.isEmail(value) })}
                 />
@@ -109,7 +109,7 @@ export const ContactForm = () => {
                 <textarea
                   name="message"
                   cols="60"
-                  placeholder='DIGITE SUA MENSAGEM'
+                  placeholder='Digite sua mensgaem'
                   className={`col-span-2 w-full rounded-xl py-2 px-3 bg-slate-100 focus:outline-none ${errors.message ? 'border border-red-600' : ''}`}
                   {...register('message', { required: true })}
                 ></textarea>

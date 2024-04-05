@@ -30,10 +30,10 @@ export const Footer = () => {
 
                         <div className='flex flex-col justify-center'>
                             <h1 className='text-xl text-start font-bold'>LINKS ÚTEIS</h1>
-                            <div className='flex flex-col pt-5 text-[13px] items-start'>
+                            <div className='flex flex-col pt-5 text-[16px] items-start'>
                                 {links.map((link, key) => {
                                     return (
-                                        <a href={link.url} key={link.key} className='text-center hover:text-slate-300 duration-200 uppercase'>{link.name}</a>
+                                        <a href={link.url} key={link.key} className='text-center hover:text-slate-300 duration-200 normal-case'>{link.name}</a>
                                     )
                                 })}
                             </div>
@@ -57,7 +57,7 @@ export const Footer = () => {
 
                                 <p className='text-start flex items-center'>
                                     <img src={phone} alt="" className='h-4 pr-2' />
-                                    <a href="tel:+551922239755">(19) 2223-9755</a> / <a href="tel:+551922239756">(19) 2223-9756</a>
+                                    <a href="tel:+551922239755" className='pr-1'>(19) 2223-9755</a> | <a href="tel:+551922239756" className='pl-1'>(19) 2223-9756</a>
                                 </p>
                             </div>
                         </div>
@@ -67,16 +67,13 @@ export const Footer = () => {
                             <div className='flex gap-2 pt-5'>
 
                                 <div className='w-6'>
-                                    <a href="" ><img src={facebook} alt="" /></a>
+                                    <a href="https://www.facebook.com/share/xqfS3gJLtLoGeny7/?mibextid=LQQJ4d" target='_blank'><img src={facebook} alt="" /></a>
                                 </div>
                                 <div className='w-6'>
-                                    <a href=""><img src={instagram} alt="" /></a>
+                                    <a href="https://www.instagram.com/lllogtransportes?igsh=MXBkM2VpeGF2cDNsMw==" target='_blank'><img src={instagram} alt="" /></a>
                                 </div>
                                 <div className='w-6'>
-                                    <a href=""><img src={linkedin} alt="" /></a>
-                                </div>
-                                <div className='w-6'>
-                                    <a href=""><img src={youtube} alt="" /></a>
+                                    <a href="https://www.linkedin.com/company/ll-log-transportes" target='_blank'><img src={linkedin} alt="" /></a>
                                 </div>
 
                             </div>
@@ -96,7 +93,7 @@ export const Footer = () => {
                     </div>
 
                     <div className='flex items-center gap-1'>
-                        <p>Desenvolvido por</p><a href="https://fourcode.com.br/" target='_blank'><img src={fourcode} alt="" className='h-5' /></a>
+                        <p>Desenvolvido por</p><a href="https://fourcode.com.br/" target='_blank'><img src={fourcode} alt="" className='h-6' /></a>
                     </div>
 
                 </div>

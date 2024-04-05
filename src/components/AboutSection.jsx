@@ -22,7 +22,7 @@ const aboutSectionInfos = [
     }
 ]
 
-let aboutText = 'Bem-vindo à Box Express, sua parceira confiável em soluções logísticas. Fundada com o compromisso de simplificar a complexidade do transporte e da cadeia de suprimentos, nós oferecemos serviços ágeis e personalizados para atender às necessidades de nossos clientes. Com uma equipe experiente e uma abordagem orientada para a excelência, estamos dedicados a impulsionar o sucesso de seus negócios através de operações eficientes e confiáveis.'
+let aboutText = 'Bem-vindo à LL Log, sua parceira confiável em soluções logísticas. Fundada com o compromisso de simplificar a complexidade do transporte e da cadeia de suprimentos, nós oferecemos serviços ágeis e personalizados para atender às necessidades de nossos clientes. Com uma equipe experiente e uma abordagem orientada para a excelência, estamos dedicados a impulsionar o sucesso de seus negócios através de operações eficientes e confiáveis.'
 
 export const AboutSection = () => {
 
