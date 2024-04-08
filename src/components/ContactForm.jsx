@@ -120,7 +120,7 @@ export const ContactForm = () => {
               <div className='col-span-2 flex justify-center'>
 
                 <button
-                  className='flex gap-3 items-center bg-red-600 px-6 py-1 rounded-md font-openSans text-lg text-white hover:bg-red-500 duration-300'
+                  className='flex gap-3 items-center bg-red-600 px-6 py-1 rounded-md font-openSans text-lg text-white hover:bg-red-800 duration-300'
                   onClick={() => handleSubmit(onSubmit)()}
                   disabled={isLoading}>
                   <img src={loading} alt="" className={`h-5 animate-spin ${isLoading ? '' : 'hidden'}`} />

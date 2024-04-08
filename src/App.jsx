@@ -30,7 +30,7 @@ function App() {
           <h2 className='md:text-2xl text-lg text-center font-openSans text-white shadowText font-semibold pt-5 pb-10'> Faça parte da mudança: otimize sua jornada logística hoje mesmo! </h2>
 
           <a href="#contact">
-            <button className={`bg-red-600 text-white px-6 py-2 md:text-2xl text-md rounded-full drop-shadow-lg hover:bg-red-500 duration-300 mb-6`}>Entre em contato</button>
+            <button className={`bg-red-600 text-white px-6 py-2 md:text-2xl text-md rounded-full drop-shadow-lg hover:bg-red-800 duration-300 mb-6`}>Entre em contato</button>
           </a>
 
         </motion.div>

@@ -84,13 +84,13 @@ export const Footer = () => {
 
             <div className='bg-red-600 bottom-0 w-full flex justify-center font-openSans text-white  text-[10px]'>
 
-                <div className='flex bg-black bg-opacity-80 items-center justify-between w-full px-5 md:py-2 py-1 md:gap-0 gap-10'>
+                <div className='flex bg-black bg-opacity-80 items-center w-full px-5 md:py-2 py-1 md:gap-0 gap-10'>
 
-                    <div>
+                    <div className='mr-[-136px]'>
                         <h3 className='text-left text-[12px]'>Copyright © {year} LL Log</h3>
                     </div>
 
-                    <div className='flex items-center gap-1'>
+                    <div className='flex items-center justify-start gap-1 mx-auto'>
                         <p className='text-[12px]'>Desenvolvido por</p><a href="https://fourcode.com.br/" target='_blank'><img src={fourcode} alt="" className='h-6' /></a>
                     </div>
 
