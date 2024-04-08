@@ -2,8 +2,6 @@ import React from 'react'
 import facebook from '../assets/icons/facebook.png'
 import instagram from '../assets/icons/instagram.png'
 import linkedin from '../assets/icons/linkedin.png'
-import youtube from '../assets/icons/youtube.png'
-import logoWhite from '../assets/logo/logoWhite.png'
 import fourcode from '../assets/logo/fourcode.png'
 import logoLL from '../assets/logo/logoLL.png'
 import { LINKS_DATA } from '../data/links'
@@ -84,9 +82,9 @@ export const Footer = () => {
 
             </div>
 
-            <div className='bg-red-900 flex justify-center font-openSans text-white py-1 text-[10px]'>
+            <div className='bg-red-600 bottom-0 w-full flex justify-center font-openSans text-white  text-[10px]'>
 
-                <div className='flex items-center justify-between w-full px-5 md:py-1 py-1 md:gap-0 gap-10'>
+                <div className='flex bg-black bg-opacity-80 items-center justify-between w-full px-5 md:py-2 py-1 md:gap-0 gap-10'>
 
                     <div>
                         <h3 className='text-left'>Copyright © {year} LL Log</h3>
