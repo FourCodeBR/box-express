@@ -18,3 +18,7 @@
 .shadowText {
     text-shadow: 2px 2px 8px #000000;
 }
+
+.navGradient {
+    background: linear-gradient(135deg, rgba(220, 38, 38, 1) 30%, #000000 30%);
+}
