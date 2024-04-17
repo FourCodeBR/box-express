@@ -20,5 +20,13 @@
 }
 
 .navGradient {
-    background: linear-gradient(135deg, rgba(220, 38, 38, 1) 30%, #000000 30%);
+    background: linear-gradient(135deg, rgba(220, 38, 38, 1) 15%, #000000 15%);
+}
+
+.mobileNavGradient {
+    background: linear-gradient(135deg, rgba(220, 38, 38, 1) 40%, #000000 40%);
+}
+
+.footerGradient {
+    background: radial-gradient(ellipse at 50% 50%, rgba(220, 38, 38, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }

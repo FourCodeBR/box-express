@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from './Button'
 import logoImg from '../assets/logo/logo.png'
 import logoLL from '../assets/logo/logoLL.png'
@@ -10,6 +10,28 @@ export const Nav = () => {
     const handleMenuClick = () => {
         setOpen(!open)
     }
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+    const handleResize = () => {
+        if (window.innerWidth <= 768) {
+            setIsMobile(true);
+        } else {
+            setIsMobile(false);
+        }
+    }
+
+    // Inicialmente chama handleResize para lidar com o carregamento inicial
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    // Limpeza na desmontagem
+    return () => {
+        window.removeEventListener('resize', handleResize);
+    };
+}, []); // Vazio [] significa que este useEffect será executado uma vez na montagem e na desmontagem
+
 
 
     let links = LINKS_DATA;
@@ -22,7 +44,7 @@ export const Nav = () => {
             animate={{ y: 0 }} // animate to y position 0
             transition={{ duration: 0.5 }} // transition duration of 0.5 seconds
         >
-            <div className='md:flex navGradient py-4 items-center justify-around px-8'>
+            <div className={`md:flex ${isMobile ? 'mobileNavGradient' : 'navGradient'} py-4 items-center justify-between px-16`}>
 
                 <div>
                     <a href="https://box.fourcode.com.br/">
