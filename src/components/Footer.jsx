@@ -17,7 +17,7 @@ export const Footer = () => {
     return (
 
         <>
-            <div className='bg-red-600 flex flex-col justify-center items-center py-8 font-openSans text-white'>
+            <div className='bg-neutral-800 flex flex-col justify-center items-center py-8 font-openSans text-white'>
 
                 <div className='flex justify-center flex-start'>
                     <div className='grid md:grid-cols-4 md:gap-10 gap-10 md:items-start w-full max-w-[1000px]'>
@@ -82,7 +82,7 @@ export const Footer = () => {
 
             </div>
 
-            <div className='bg-red-600 bottom-0 w-full flex font-openSans text-white  text-[10px]'>
+            <div className='bg-neutral-800 bottom-0 w-full flex font-openSans text-white  text-[10px]'>
 
                 <div className='flex justify-between bg-black bg-opacity-80 items-center w-full px-8 md:py-2 py-1 md:gap-0 gap-10'>
 
