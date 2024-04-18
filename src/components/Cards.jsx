@@ -10,7 +10,7 @@ export const Cards = () => {
     return (
         <>
             <motion.div
-                className='flex flex-col md:flex-row w-full items-center justify-center text-white font-openSans md:mt-[-165px] mt-[-100px]'
+                className='flex flex-col md:flex-row w-full items-center justify-center text-white font-openSans md:mt-[-165px] mt-[-100px] pb-10'
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}

@@ -1,40 +1,45 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from './Button'
-import logoLL from '../assets/logo/logoLL.png'
 import logoEscritaLL from '../assets/logo/logoEscritaLL.png'
 import { LINKS_DATA } from '../data/links'
 import { motion } from 'framer-motion'
 
 export const Nav = () => {
-    const [open, setOpen] = useState(false)
-    const handleMenuClick = () => {
-        setOpen(!open)
-    }
-    const [isMobile, setIsMobile] = useState(false);
+    const [open, setOpen] = useState(false);
+    const handleMenuClick = () => { setOpen(!open) };
+    const [activeLink, setActiveLink] = useState('');
+    let links = LINKS_DATA;
 
     useEffect(() => {
-    const handleResize = () => {
-        if (window.innerWidth <= 768) {
-            setIsMobile(true);
-        } else {
-            setIsMobile(false);
+        /* Definir o activeLink como o ID da seção que estiver sendo visualizada */
+        window.addEventListener('scroll', () => {
+            links.forEach(link => {
+                const section = document.querySelector(link.url);
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < 150 && sectionTop > -150) {
+                    setActiveLink(link.name);
+                    console.log(link.name);
+                }
+            });
+        });
+
+        /* Remover o event listener quando o componente for desmontado */
+        return () => {
+            window.removeEventListener('scroll', () => {
+                links.forEach(link => {
+                    const section = document.querySelector(link.url);
+                    const sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < 150 && sectionTop > -150) {
+                        setActiveLink(link.name);
+                    }
+                });
+            });
         }
-    }
-
-    // Inicialmente chama handleResize para lidar com o carregamento inicial
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-
-    // Limpeza na desmontagem
-    return () => {
-        window.removeEventListener('resize', handleResize);
-    };
-}, []); // Vazio [] significa que este useEffect será executado uma vez na montagem e na desmontagem
 
 
+    },[]);
 
-    let links = LINKS_DATA;
+
 
     return (
 
@@ -61,7 +66,14 @@ export const Nav = () => {
                     {links.map((link, key) => (
 
                         <li key={link.key} className='md:pl-8 text-lg md:my-0 my-5'>
-                            <a href={link.url} className='text-white hover:text-gray-400 duration-300 font-semibold font-openSans'>{link.name}</a>
+                            <a
+                                href={link.url}
+                                className={`text-white hover:text-gray-400 duration-300 font-semibold font-openSans ${activeLink === link.name ? 'text-gray-500' : ''}`}
+                                onClick={() => setActiveLink(link.name)}
+                            >
+                                {link.name}
+                            </a>
+
                         </li>
 
                     )
