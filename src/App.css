@@ -30,3 +30,7 @@
 .footerGradient {
     background: radial-gradient(ellipse at 50% 50%, rgba(220, 38, 38, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
+
+.nav-active-link {
+    color: #888888 !important;
+}
