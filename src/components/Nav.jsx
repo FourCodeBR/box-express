@@ -12,6 +12,7 @@ export const Nav = () => {
 
     useEffect(() => {
         const onScroll = () => {
+            let found = false;
             links.forEach(link => {
                 const section = document.querySelector(link.url);
                 if (section) {
@@ -19,24 +20,19 @@ export const Nav = () => {
                     const offset = 150;
                     if (sectionTop < offset && sectionTop >= -offset) {
                         setActiveLink(link.name);
-                        return; // Stop checking once the active link is found
+                        found = true;
                     }
                 }
             });
-        };
-    
-        const intervalId = setInterval(() => {
-            const isLoaded = document.querySelector(links[0].url); // Verifica se o primeiro link pode ser selecionado
-            if (isLoaded) {
-                window.addEventListener('scroll', onScroll);
-                clearInterval(intervalId); // Limpa o intervalo uma vez que o elemento é encontrado
+
+            // Se nenhum link foi encontrado como ativo e está perto do final da página, limpa o link ativo
+            if (!found && window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+                setActiveLink('');
             }
-        }, 100); // Verifica a cada 100ms
-    
-        return () => {
-            window.removeEventListener('scroll', onScroll);
-            clearInterval(intervalId);
         };
+    
+        window.addEventListener('scroll', onScroll);
+        return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
     return (
